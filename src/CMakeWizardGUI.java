@@ -4,27 +4,31 @@ import javax.swing.*;
 public class CMakeWizardGUI {
 
     private JFrame frame;
-    private JPanel panel;
 
     public void InitWindow() {
         // Create and set up the window
         frame = new JFrame("CMake Wizard");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // Create the panel and add the components
-        panel = new JPanel();
-
-        // Add the panel to the window
-        frame.getContentPane().add(panel);
         
         // Set the size of the window
-        frame.setPreferredSize(new Dimension(600, 450));
+        int dims[] = {800, 450};
+        frame.setPreferredSize(new Dimension(dims[0], dims[1]));
         frame.setResizable(false);
 
-        // Display the window
-        frame.pack();
-        frame.setLocationRelativeTo(null);
+
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int screenWidth = (int) screenSize.getWidth();
+        int screenHeight = (int) screenSize.getHeight();
+
+        int centerXY[] = {(screenWidth - dims[0])/2, (screenHeight - dims[1])/2};
+
+        frame.setLocation(centerXY[0], centerXY[1]);
         frame.setVisible(true);
+
     }
 
+    public void SetUIContents(){
+        PanelOrganisation panelOrg = new PanelOrganisation(frame);
+        panelOrg.Init();
+    }
 }
