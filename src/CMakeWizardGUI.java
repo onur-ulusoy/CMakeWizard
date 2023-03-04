@@ -37,11 +37,12 @@ public class CMakeWizardGUI extends JFrame{
         panels = panelOrg.Init();
         leftPanel = panels[0];
         rightPanel = panels[1];
-        
-        SettingsOrganisation so = new SettingsOrganisation(leftPanel, rightPanel);
-        so.addSettingsHeader();
-        so.addProjectName();
-        so.addVersions();
+        leftPanel.setBackground(new Color(238,238,238));
+
+        PanelSettings sp = new PanelSettings(leftPanel, rightPanel);
+        sp.addSettingsHeader();
+        sp.addProjectName();
+        sp.addVersions();
     }
 
     public void setFramePacked(){

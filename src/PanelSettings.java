@@ -1,11 +1,12 @@
 import java.awt.*;
 import javax.swing.*;
 
-public class SettingsOrganisation {
+public class PanelSettings{
 
     private JPanel leftPanel;
     private JPanel rightPanel;
-    SettingsOrganisation(JPanel leftPanel, JPanel rightPanel){
+
+    PanelSettings(JPanel leftPanel, JPanel rightPanel){
         this.leftPanel = leftPanel;
         this.rightPanel = rightPanel;
     }
