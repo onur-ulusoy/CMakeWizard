@@ -8,11 +8,24 @@ public class CMakeManager {
     @Getter @Setter
     private String projectName;
 
+    @Getter @Setter
+    private String projectMainDir;
+
+    @Getter @Setter
+    private String projectOutputDir;
+
+    @Setter
+    private String minCMakeReq;
+
+    @Setter
+    private String cVersion;
+
     @Getter
     private List<String> srcDirs = new ArrayList<>();
 
     @Getter
     private List<String> incDirs = new ArrayList<>();
+
 
     public CMakeManager(String projectName) {
         this.projectName = projectName;
@@ -24,5 +37,9 @@ public class CMakeManager {
 
     public void addIncDir(String incDir){
         incDirs.add(incDir);
+    }
+
+    public void createParentCMakeLists(){
+        new FileCreator(projectMainDir, "CMakeLists.txt");
     }
 }
