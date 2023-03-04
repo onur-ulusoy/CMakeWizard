@@ -41,5 +41,12 @@ public class CMakeManager {
 
     public void createParentCMakeLists(){
         new FileCreator(projectMainDir, "CMakeLists.txt");
+        
+        String contents[] = {minCMakeReq, projectName, cVersion};
+        //new MainListContentCreator(projectMainDir, "CMakeLists.txt", contents, srcDirs);
+        //String[] contents, List<String> srcDirs
+
+        String content = "trial";
+        new MainListContentFiller(projectMainDir, "CMakeLists.txt", content);
     }
 }
