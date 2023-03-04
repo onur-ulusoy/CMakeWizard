@@ -3,5 +3,6 @@ public class Main {
         CMakeWizardGUI ui = new CMakeWizardGUI();
         ui.InitWindow(); 
         ui.SetUIContents();
+        ui.setFramePacked();
     }
 }

@@ -4,6 +4,7 @@ import javax.swing.*;
 public class CMakeWizardGUI {
 
     private JFrame frame;
+    private JPanel leftPanel;
 
     public void InitWindow() {
         // Create and set up the window
@@ -29,6 +30,11 @@ public class CMakeWizardGUI {
 
     public void SetUIContents(){
         PanelOrganisation panelOrg = new PanelOrganisation(frame);
-        panelOrg.Init();
+        leftPanel = panelOrg.Init();
+        VersionsPanel vp = new VersionsPanel(leftPanel);
+    }
+
+    public void setFramePacked(){
+        frame.pack();
     }
 }
