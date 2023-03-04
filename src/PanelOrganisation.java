@@ -11,7 +11,7 @@ class PanelOrganisation{
         this.frame = frame;
     }
 
-    public JPanel Init() {
+    public JPanel[] Init() {
         // Create the panel for the left component
         leftPanel = new JPanel();
         leftPanel.setBackground(Color.WHITE);
@@ -29,7 +29,8 @@ class PanelOrganisation{
         frame.getContentPane().add(splitPane);
         
         addConsoleHeader();
-        return leftPanel;
+        JPanel panels[] = {leftPanel, rightPanel};
+        return panels;
 
     }
 

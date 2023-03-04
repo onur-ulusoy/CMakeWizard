@@ -4,8 +4,10 @@ import javax.swing.*;
 public class SettingsOrganisation {
 
     private JPanel leftPanel;
-    SettingsOrganisation(JPanel leftPanel){
+    private JPanel rightPanel;
+    SettingsOrganisation(JPanel leftPanel, JPanel rightPanel){
         this.leftPanel = leftPanel;
+        this.rightPanel = rightPanel;
     }
 
     public void addSettingsHeader(){
@@ -27,11 +29,15 @@ public class SettingsOrganisation {
     }
 
     public void addProjectName(){
-        new PanelProjectName(leftPanel);
+        new PanelProjectName(leftPanel, rightPanel);
     }
 
     public void addVersions(){
         new PanelVersions(leftPanel);
+    }
+
+    public void addSpacer(){
+        leftPanel.add(Box.createVerticalGlue());
     }
 
 }
