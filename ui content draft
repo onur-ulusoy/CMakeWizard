@@ -1,0 +1,11 @@
+console
+cmake version
+project name
+cmake c/cpp standart
+source files
+include files
+external library .a files
+do you want to create also libraries
+output dir
+build button
+process bar
