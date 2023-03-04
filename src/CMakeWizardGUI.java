@@ -31,8 +31,10 @@ public class CMakeWizardGUI {
     public void SetUIContents(){
         PanelOrganisation panelOrg = new PanelOrganisation(frame);
         leftPanel = panelOrg.Init();
-        new PanelProjectName(leftPanel);
-        new VersionsPanel(leftPanel);
+        SettingsOrganisation so = new SettingsOrganisation(leftPanel);
+        so.addSettingsHeader();
+        so.addProjectName();
+        so.addVersions();
     }
 
     public void setFramePacked(){

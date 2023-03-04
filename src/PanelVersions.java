@@ -1,8 +1,8 @@
 import java.awt.*;
 import javax.swing.*;
 
-public class VersionsPanel{
-    VersionsPanel(JPanel leftPanel){
+public class PanelVersions{
+    PanelVersions(JPanel leftPanel){
         // Create a panel for the comboboxes and add them to it
         JPanel comboBoxPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 10)); // horizontal and vertical gap of 10 pixels
 
